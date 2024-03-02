@@ -17,7 +17,7 @@ class SignupView(APIView):
         password = data['password']
         password2 = data['password2']
 
-        # Validate password complexity (replace with a robust validator)
+        # Validate password complexity 
         if not any(char.isupper() for char in password):
             return Response({'error': 'Password must contain at least one uppercase letter'})
         if not any(char.islower() for char in password):
